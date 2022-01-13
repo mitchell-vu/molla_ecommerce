@@ -1,0 +1,30 @@
+<div class="tab-pane p-0 fade {{tab.class}}" id="{{tab.id}}-tab" role="tabpanel"
+  aria-labelledby="{{tab.id}}-link">
+  <div class="owl-carousel owl-full carousel-equal-height carousel-with-shadow" data-toggle="owl" data-owl-options='{
+                            "nav": true, 
+                            "dots": true,
+                            "margin": 20,
+                            "loop": false,
+                            "responsive": {
+                                "0": {
+                                    "items":2
+                                },
+                                "480": {
+                                    "items":2
+                                },
+                                "768": {
+                                    "items":3
+                                },
+                                "992": {
+                                    "items":4
+                                },
+                                "1200": {
+                                    "items":5
+                                }
+                            }
+                        }'>
+    {% for product in tab.products %}
+    {% include 'product.html' %}
+    {% endfor %}
+  </div><!-- End .owl-carousel -->
+</div><!-- .End .tab-pane -->
