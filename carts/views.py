@@ -80,7 +80,6 @@ def add_cart(request, product_id):
     # Get Cart
     if current_user.is_authenticated:
         cart, cartCreated = Cart.objects.get_or_create(user=current_user)
-        cart_items = CartItem.objects.filter(product=product, cart=cart)
     else:
         try:
             # Get cart using the _cart_id
@@ -92,6 +91,7 @@ def add_cart(request, product_id):
         cart.save()
 
     # Check for the CartItem
+    cart_items = CartItem.objects.filter(product=product, cart=cart)
     if cart_items.exists():
         existing_variation_list = [
             list(item.variations.all()) for item in cart_items]
