@@ -42,9 +42,8 @@ def product_detail(request, category_slug, product_slug):
         category__slug=category_slug,
         slug=product_slug
     )
-    recommendations = Product.objects.all()
+    recommendations = Product.objects.all()[0:9]
     colors = single_product.variation_set.filter(variation_category__category_name='Color')
-    print(colors)
     context = {
         'single_product': single_product,
         'recommendations': recommendations,

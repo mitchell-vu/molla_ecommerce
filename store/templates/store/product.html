@@ -14,15 +14,15 @@
     </div><!-- End .product-action -->
 
     <div class="product-action">
-      <a href="#" class="btn-product btn-cart" title="Add to cart"><span>Add to cart</span></a>
+      <a data-product="{{ product.id }}" class="btn-product btn-cart add-cart-btn" title="Add to cart"><span>Add to cart</span></a>
     </div><!-- End .product-action -->
   </figure><!-- End .product-media -->
 
   <div class="product-body">
     <div class="product-cat">
-      <a href="#">{{ product.category }}</a>
+      <a href="{{ product.category.get_url }}">{{ product.category }}</a>
     </div><!-- End .product-cat -->
-    <h3 class="product-title"><a href="product.html">{{ product }}</a></h3>
+    <h3 class="product-title"><a href="{{ product.get_url }}">{{ product }}</a></h3>
     <!-- End .product-title -->
     <div class="product-price">
       {{ product.price|intcomma }} đ
@@ -37,8 +37,7 @@
     <div class="product-nav product-nav-dots">
       <a href="#" style="background: #69b4ff;"><span class="sr-only">Color name</span></a>
       <a href="#" style="background: #ff887f;"><span class="sr-only">Color name</span></a>
-      <a href="#" class="active" style="background: #333333;"><span class="sr-only">Color
-          name</span></a>
+      <a href="#" class="active" style="background: #333333;"><span class="sr-only">Color name</span></a>
     </div><!-- End .product-nav -->
   </div><!-- End .product-body -->
 </div>

@@ -51,7 +51,7 @@ class VariationCategory(models.Model):
     display = models.CharField(max_length=100, null=True)
 
     def __str__(self):
-        return self.display
+        return self.category_name
 
     class Meta:
         verbose_name = 'variation category'

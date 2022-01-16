@@ -43,37 +43,24 @@
                             </figure><!-- End .product-main-image -->
 
                             <div id="product-zoom-gallery" class="product-image-gallery">
-                                <a class="product-gallery-item active" href="#"
-                                    data-image="assets/images/products/single/1.jpg"
-                                    data-zoom-image="assets/images/products/single/1-big.jpg">
-                                    <img src="{% static 'assets/images/products/single/1-small.jpg' %}" alt="product side">
+                                {% with single_product.variation_set.all as variations %}
+                                {% for variation in variations %}
+                                <a class="product-gallery-item {% if variation == variations.0 %}active{% endif %}" href="#"
+                                    data-image="{{ variation.variation_image }}"
+                                    data-zoom-image="{{ variation.variation_image.url }}">
+                                    <img src="{{ variation.variation_image.url }}" alt="{{ variation }}">
                                 </a>
-
-                                <a class="product-gallery-item" href="#"
-                                    data-image="assets/images/products/single/2.jpg"
-                                    data-zoom-image="assets/images/products/single/2-big.jpg">
-                                    <img src="{% static 'assets/images/products/single/2-small.jpg' %}" alt="product cross">
-                                </a>
-
-                                <a class="product-gallery-item" href="#"
-                                    data-image="assets/images/products/single/3.jpg"
-                                    data-zoom-image="assets/images/products/single/3-big.jpg">
-                                    <img src="{% static 'assets/images/products/single/3-small.jpg' %}" alt="product with model">
-                                </a>
-
-                                <a class="product-gallery-item" href="#"
-                                    data-image="assets/images/products/single/4.jpg"
-                                    data-zoom-image="assets/images/products/single/4-big.jpg">
-                                    <img src="{% static 'assets/images/products/single/4-small.jpg' %}" alt="product back">
-                                </a>
+                                {% endfor %}
+                                {% endwith %}
                             </div><!-- End .product-image-gallery -->
                         </div><!-- End .row -->
                     </div><!-- End .product-gallery -->
                 </div><!-- End .col-md-6 -->
 
                 <div class="col-md-6">
-                    <div class="product-details">
-                        <h1 class="product-title">{{ single_product.product_name}}</h1><!-- End .product-title -->
+                    <form class="product-details" method="post" action="{% url 'add_cart' single_product.id %}">
+                        {% csrf_token %}
+                        <h1 class="product-title">{{ single_product.product_name }}</h1><!-- End .product-title -->
 
                         <div class="ratings-container">
                             <div class="ratings">
@@ -93,9 +80,11 @@
                             <div class="product-nav product-nav-thumbs">
                                 
                                 {% for color in colors %}
-                                <a href="#" class="">
-                                    <img src="{{ color.variation_image.url }}" alt="product desc">
-                                </a>
+                                <input type="radio" style="display: none" name="Color" id="{{ color.variation_value }}" value="{{ color.variation_value }}">
+                                    <label for="{{ color.variation_value }}">
+                                        <img src="{{ color.variation_image.url }}" alt="product desc">
+                                    </label>
+                                </input>
                                 {% endfor %}
 
                             </div><!-- End .product-nav -->
@@ -120,13 +109,13 @@
                         <div class="details-filter-row details-row-size">
                             <label for="qty">Qty:</label>
                             <div class="product-details-quantity">
-                                <input type="number" id="qty" class="form-control" value="1" min="1" max="10" step="1"
+                                <input type="number" id="qty" class="form-control" value="1" min="1" max="10" step="1" name="quantity"
                                     data-decimals="0" required>
                             </div><!-- End .product-details-quantity -->
                         </div><!-- End .details-filter-row -->
 
                         <div class="product-details-action">
-                            <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
+                            <button type="submit" class="btn-product btn-cart"><span>add to cart</span></button>
 
                             <div class="details-action-wrapper">
                                 <a href="#" class="btn-product btn-wishlist" title="Wishlist"><span>Add to Wishlist</span></a>
@@ -153,7 +142,7 @@
                                         class="icon-pinterest"></i></a>
                             </div>
                         </div><!-- End .product-details-footer -->
-                    </div><!-- End .product-details -->
+                    </form><!-- End .product-details -->
                 </div><!-- End .col-md-6 -->
             </div><!-- End .row -->
         </div><!-- End .product-details-top -->
