@@ -42,14 +42,14 @@
 
 <body>
   <div class="page-wrapper">
-    {% include 'header.html' %}<!-- End .header -->
+    {% include 'include/header.html' %}<!-- End .header -->
 
     <main class="main">
       {% block content %}
       {% endblock content %}
     </main><!-- End .main -->
 
-    {% include 'footer.html' %}<!-- End .footer -->
+    {% include 'include/footer.html' %}<!-- End .footer -->
   </div><!-- End .page-wrapper -->
 
   <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
@@ -263,7 +263,7 @@
   </div><!-- End .mobile-menu-container -->
 
   <!-- Sign in / Register Modal -->
-  {% include 'auth-modal.html' %}
+  {% include 'include/auth-modal.html' %}
 
   
   <!-- Plugins JS File -->

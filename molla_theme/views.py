@@ -61,4 +61,15 @@ def home(request):
     'trending': trending_tab,
     'recommendations': Product.objects.all()[:8],
   }
-  return render(request, 'home.html', context)
+  return render(request, 'home/home.html', context)
+
+
+def error_404(request, exception):
+  # print(exception)
+  context = {}
+  return render(request, 'home/404.html', context)
+
+
+def contact(request):
+  context = {}
+  return render(request, 'home/contact.html', context)
