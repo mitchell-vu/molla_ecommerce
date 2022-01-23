@@ -37,7 +37,11 @@
                   </div><!-- End .header-menu -->
                 </div>
               </li>
+              {% if request.user.is_authenticated %}
+              <li>Xin chào, <a href="{% url 'account' %}">{{ request.user.full_name }}</a></li>
+              {% else %}
               <li><a href="#signin-modal" data-toggle="modal">Sign in / Sign up</a></li>
+              {% endif %}
             </ul>
           </li>
         </ul><!-- End .top-menu -->
@@ -95,6 +99,8 @@
           </a>
 
           <div class="dropdown-menu dropdown-menu-right">
+            
+            {% if cart_items|length > 0%}
             <div class="dropdown-cart-products">
 
               {% for item in cart_items %}
@@ -118,14 +124,20 @@
                 <a href="{% url 'remove_cart_item' item.id %}" class="btn-remove" title="Remove Product"><i class="icon-close"></i></a>
               </div><!-- End .product -->
               {% endfor %}
-
+              
             </div><!-- End .cart-product -->
-
+            
             <div class="dropdown-cart-total">
               <span>Total</span>
-
+              
               <span class="cart-total-price">{{ sub_total|intcomma }} đ</span>
             </div><!-- End .dropdown-cart-total -->
+            
+            {% else %}
+            <div>
+              <span>Giỏ hàng trống</span>
+            </div>
+            {% endif %}
 
             <div class="dropdown-cart-action">
               <a href="{% url 'cart' %}" class="btn btn-primary">View Cart</a>

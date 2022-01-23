@@ -159,9 +159,23 @@ def remove_cart_item(request, cart_item_id):
     return redirect(request.META['HTTP_REFERER'])
 
 
-def checkout(request):
-    context = {
+# @login_required(login_url='login')
+def checkout(request, total=0, quantity=0, cart_items=None):
+    try:
+        cart = get_cart(request)
+        cart_items = CartItem.objects.filter(cart=cart, is_active=True)
+        for cart_item in cart_items:
+            total += cart_item.sub_total()
+            quantity += cart_item.quantity
+        grand_total = total
+    except ObjectDoesNotExist:
+        pass    # Chỉ bỏ qua
 
+    context = {
+        'total': total,
+        'quantity': quantity,
+        'cart_items': cart_items,
+        'grand_total': grand_total,
     }
 
     return render(request, 'carts/checkout.html', context)
