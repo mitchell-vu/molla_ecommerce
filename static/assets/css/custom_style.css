@@ -1,0 +1,25 @@
+figure.product-media a img {
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.sticky-bar figure.product-media a img {
+  padding: 0;
+}
+
+.table-cart figure.product-media a img {
+  padding: 0.5rem;
+  background-color: #fff;
+}
+
+.table.table-cart .total-col {
+  width: auto;
+}
+
+.summary-cart .table.table-summary .summary-total td:last-child {
+  min-width: 100px !important;
+}
+
+.btn-remove {
+  color: #cccccc !important;
+}

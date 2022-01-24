@@ -88,13 +88,17 @@ WSGI_APPLICATION = 'molla_theme.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': "django.db.backends.mysql",
-        'NAME': "molla_ecommerce",
-        'HOST': "localhost",
-        'PORT': "3306",
-        'USER': "root",
-        'PASSWORD': "vmhieu2001",
-    }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    },
+    # 'default': {
+    #     'ENGINE': "django.db.backends.mysql",
+    #     'NAME': "molla_ecommerce",
+    #     'HOST': "localhost",
+    #     'PORT': "3306",
+    #     'USER': "root",
+    #     'PASSWORD': "",
+    # }
 }
 
 # Authencation Model
