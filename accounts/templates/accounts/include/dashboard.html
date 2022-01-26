@@ -1,0 +1,64 @@
+{% load humanize %}
+
+<div class="tab-pane fade show active" id="tab-dashboard" role="tabpanel" aria-labelledby="tab-dashboard-link">
+  <p>Hello <span class="font-weight-normal text-dark">{{ user.full_name }}</span> (not <span
+      class="font-weight-normal text-dark">{{ user.full_name }}</span>? <a href="#">Log out</a>)
+    <br>
+    From your account dashboard you can view your <a href="#tab-orders" class="tab-trigger-link link-underline">recent
+      orders</a>, manage your <a href="#tab-address" class="tab-trigger-link">shipping and billing addresses</a>, and <a
+      href="#tab-account" class="tab-trigger-link">edit your password and account details</a>.
+  </p>
+
+  <h4 class="my-5 text-dark">Các đơn hàng gần đây</h4>
+
+  {% with orders|slice:"2" as filter_orders%}
+  {% for order in filter_orders %}
+  <div class="mb-5" id="accordion-{{ order.order_number }}">
+    <div class="card card-box card-sm bg-light ">
+      <div class="card-header" id="heading{{ order.order_number }}-1">
+        <h2 class="card-title">
+          <a role="button" data-toggle="collapse" href="#collapse{{ order.order_number }}-1" aria-expanded="true"
+            aria-controls="collapse5-1">
+            ID Đơn hàng: <span>{{ order.order_number }}</span>
+          </a>
+        </h2>
+      </div><!-- End .card-header -->
+
+      <div id="collapse{{ order.order_number }}-1" class="collapse {% if forloop.counter == 1 %}show{% endif %}"
+        aria-labelledby="heading{{ order.order_number }}-1" data-parent="#accordion-{{ order.order_number }}">
+        <div class="card-body">
+
+          <p>Trạng thái đơn hàng: <span>{{ order.status }}</span></p>
+
+          <table class="table table-orders table-mobile">
+            <tbody>
+
+              {% for order_item in order.orderproduct_set.all %}
+              <tr>
+                <td class="product-col">
+                  <div class="product">
+                    <figure class="product-media">
+                      <a href="{{ order_item.product.get_url }}">
+                        <img src="{{ order_item.product.images.url }}" alt="Product image">
+                      </a>
+                    </figure>
+
+                    <h3 class="product-title">
+                      <a href="{{ order_item.product.get_url }}">{{ order_item.product }}</a>
+                    </h3><!-- End .product-title -->
+                  </div><!-- End .product -->
+                </td>
+                <td class="quantity-col">x {{ order_item.quantity }}</td>
+                <td class="price-col">{{ order_item.product.price|intcomma }}đ</td>
+              </tr>
+              {% endfor %}
+
+            </tbody>
+          </table><!-- End .table table-orders -->
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  {% endwith %}
+</div>

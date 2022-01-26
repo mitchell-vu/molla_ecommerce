@@ -4,10 +4,11 @@ figure.product-media a img {
 }
 
 .sticky-bar figure.product-media a img {
-  padding: 0;
+  padding: 0 !important;
 }
 
-.table-cart figure.product-media a img {
+.table-cart figure.product-media a img,
+.table-orders figure.product-media a img {
   padding: 0.5rem;
   background-color: #fff;
 }
@@ -22,4 +23,9 @@ figure.product-media a img {
 
 .btn-remove {
   color: #cccccc !important;
+}
+
+.table-orders tbody tr:last-child > td{
+  border: 0;
+  padding-bottom: 1.5rem;
 }

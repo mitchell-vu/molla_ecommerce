@@ -1,0 +1,62 @@
+{% load humanize %}
+
+<div class="tab-pane fade" id="tab-orders" role="tabpanel" aria-labelledby="tab-orders-link">
+  {% if orders.count > 0 %}
+
+  {% for order in orders%}
+  <div class="mb-5" id="accordion-{{ order.order_number }}">
+    <div class="card card-box card-sm bg-light ">
+      <div class="card-header" id="heading{{ order.order_number }}-1">
+        <h2 class="card-title">
+          <a role="button" data-toggle="collapse" href="#collapse{{ order.order_number }}-1" aria-expanded="true" aria-controls="collapse5-1">
+            ID Đơn hàng: <span>{{ order.order_number }}</span>
+          </a>
+        </h2>
+      </div><!-- End .card-header -->
+      
+      <div id="collapse{{ order.order_number }}-1" class="collapse show" aria-labelledby="heading{{ order.order_number }}-1" data-parent="#accordion-{{ order.order_number }}">
+        <div class="card-body">
+
+          <p>Trạng thái đơn hàng: <span>{{ order.status }}</span></p>
+
+          <table class="table table-orders table-mobile">
+            <tbody>
+
+              {% for order_item in order.orderproduct_set.all %}
+              <tr>
+                <td class="product-col">
+                  <div class="product">
+                    <figure class="product-media">
+                      <a href="{{ order_item.product.get_url }}">
+                        <img src="{{ order_item.product.images.url }}" alt="Product image">
+                      </a>
+                    </figure>
+
+                    <h3 class="product-title">
+                      <a href="{{ order_item.product.get_url }}">{{ order_item.product }}</a>
+                    </h3><!-- End .product-title -->
+                  </div><!-- End .product -->
+                </td>
+                <td class="quantity-col">x {{ order_item.quantity }}</td>
+                <td class="price-col">{{ order_item.product.price|intcomma }}đ</td>
+              </tr>
+              {% endfor %}
+
+            </tbody>
+          </table><!-- End .table table-orders -->
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+  {% else %}
+
+  <p>No order has been made yet.</p>
+  <a href="{% url 'store' %}" class="btn btn-outline-primary-2">
+    <span>GO SHOP</span>
+    <i class="icon-long-arrow-right"></i>
+  </a>
+
+  {% endif %}
+</div><!-- .End .tab-pane -->

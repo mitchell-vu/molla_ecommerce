@@ -164,7 +164,7 @@ def place_order(request, total=0, quantity=0,):
             # Send thank you mail
             # sendEmail(request=request, order=order)
 
-        return redirect('home')
+        return redirect('account')
     
     else:
         return redirect('checkout')

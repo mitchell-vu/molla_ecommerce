@@ -4,7 +4,7 @@ from .models import *
 # Register your models here.
 
 class OrderAdmin(admin.ModelAdmin):
-  list_display = ('full_name', 'email', 'phone')
+  list_display = ('order_number', 'full_name', 'email', 'phone')
 
 class OrderProductAdmin(admin.ModelAdmin):
   list_display = ('order', 'product', 'quantity')

@@ -1,0 +1,30 @@
+<div class="tab-pane fade" id="tab-address" role="tabpanel" aria-labelledby="tab-address-link">
+  <p>The following addresses will be used on the checkout page by default.</p>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card card-dashboard">
+        <div class="card-body">
+          <h3 class="card-title">Shipping Address</h3><!-- End .card-title -->
+
+          {% if address is not None %}
+
+          <p>  
+            <div>Địa chỉ:  {{ address }}</div>
+            <div>Quận/Huyện:  {{ province }}</div>
+            <div>Thành phố/Tỉnh:  {{ city }}</div>
+          </p>
+
+          {% else %}
+
+          <p>You have not set up this type of address yet.<br>
+            <a href="#">Edit <i class="icon-edit"></i></a>
+          </p>
+
+          {% endif %}
+
+        </div><!-- End .card-body -->
+      </div><!-- End .card-dashboard -->
+    </div><!-- End .col-lg-6 -->
+  </div><!-- End .row -->
+</div><!-- .End .tab-pane -->
