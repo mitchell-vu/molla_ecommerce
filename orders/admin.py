@@ -3,6 +3,13 @@ from .models import *
 
 # Register your models here.
 
-admin.site.register(Order)
+class OrderAdmin(admin.ModelAdmin):
+  list_display = ('full_name', 'email', 'phone')
+
+class OrderProductAdmin(admin.ModelAdmin):
+  list_display = ('order', 'product', 'quantity')
+
+
+admin.site.register(Order, OrderAdmin)
+admin.site.register(OrderProduct, OrderProductAdmin)
 admin.site.register(Payment)
-admin.site.register(OrderProduct)

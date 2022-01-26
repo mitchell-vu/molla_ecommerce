@@ -3,7 +3,7 @@
 {% load humanize %}
 {% block content %}
 
-<div class="page-header text-center" style="background-image: url('assets/images/page-header-bg.jpg')">
+<div class="page-header text-center" style="background-image: url({% static 'assets/images/page-header-bg.jpg' %})">
   <div class="container">
     <h1 class="page-title">Checkout<span>Shop</span></h1>
   </div><!-- End .container -->
@@ -28,40 +28,40 @@
               code</span></label>
         </form>
       </div><!-- End .checkout-discount -->
-      <form action="#">
+      <form action="{% url 'place_order' %}" method="POST">
+        {% csrf_token %}
         <div class="row">
           <div class="col-lg-9">
             <h2 class="checkout-title">Billing Details</h2><!-- End .checkout-title -->
             <div class="row">
               <div class="col-sm-6">
                 <label>Full Name *</label>
-                <input type="text" class="form-control" value="{{ request.user.full_name }}" required>
+                <input name="full_name" type="text" class="form-control" value="{{ request.user.full_name }}" required>
               </div><!-- End .col-sm-6 -->
 
               <div class="col-sm-6">
                 <label>Phone *</label>
-                <input type="text" class="form-control" required>
+                <input name="phone_number" type="text" class="form-control" value="{{ request.user.phone_number }}" required>
               </div><!-- End .col-sm-6 -->
             </div><!-- End .row -->
 
-            <label>Street address *</label>
-            <input type="text" class="form-control" placeholder="House number and Street name" required>
-            <input type="text" class="form-control" placeholder="Appartments, suite, unit etc ..." required>
+            <label>Address *</label>
+            <input name="address" type="text" class="form-control"  placeholder="House number and Street name"  value="{{ request.user.address }}" required>
 
             <div class="row">
               <div class="col-sm-6">
-                <label>Town / City *</label>
-                <input type="text" class="form-control" required>
+                <label>Province *</label>
+                <input name="province" type="text" class="form-control" value="{{ request.user.province }}" required>
               </div><!-- End .col-sm-6 -->
 
               <div class="col-sm-6">
-                <label>State / County *</label>
-                <input type="text" class="form-control" required>
+                <label>City *</label>
+                <input name="city" type="text" class="form-control" value="{{ request.user.city }}" required>
               </div><!-- End .col-sm-6 -->
             </div><!-- End .row -->
 
             <label>Email address *</label>
-            <input type="email" class="form-control" value="{{ request.user.email }}" required>
+            <input name="email" type="email" class="form-control" value="{{ request.user.email }}" required>
 
             <div class="custom-control custom-checkbox">
               <input type="checkbox" class="custom-control-input" id="checkout-diff-address">
@@ -69,7 +69,7 @@
             </div><!-- End .custom-checkbox -->
 
             <label>Order notes (optional)</label>
-            <textarea class="form-control" cols="30" rows="4"
+            <textarea name="order_note" class="form-control" cols="30" rows="4"
               placeholder="Notes about your order, e.g. special notes for delivery"></textarea>
           </div><!-- End .col-lg-9 -->
           <aside class="col-lg-3">

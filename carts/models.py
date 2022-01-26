@@ -11,7 +11,9 @@ class Cart(models.Model):
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.user.email
+        if self.user is not None:
+            return self.user.email
+        return self.cart_id
 
     def sub_total(self):
         cart_items = CartItem.objects.filter(cart=self)

@@ -40,6 +40,9 @@ class Account(AbstractBaseUser):
     full_name = models.CharField(max_length=100)
     email = models.CharField(max_length=50, unique=True)
     phone_number = models.CharField(max_length=20)
+    address = models.CharField(max_length=300)
+    province = models.CharField(max_length=100)
+    city = models.CharField(max_length=100)
 
     date_joined = models.DateTimeField(auto_now_add=True)
     last_login = models.DateTimeField(auto_now_add=True)

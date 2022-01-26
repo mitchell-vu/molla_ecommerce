@@ -163,13 +163,18 @@ def remove_cart_item(request, cart_item_id):
 def checkout(request, total=0, quantity=0, cart_items=None):
     try:
         cart = get_cart(request)
+    except:
+        return redirect('home')
+
+    try:
         cart_items = CartItem.objects.filter(cart=cart, is_active=True)
         for cart_item in cart_items:
             total += cart_item.sub_total()
             quantity += cart_item.quantity
-        grand_total = total
     except ObjectDoesNotExist:
         pass    # Chỉ bỏ qua
+    
+    grand_total = total or 0
 
     context = {
         'total': total,
