@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-t@ljzb_$(*cwh&$qy#1y^y!^58rdj3$bao&wzih(qto2jhs^eg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS =  []
+# ALLOWED_HOSTS =  ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -74,7 +75,8 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
 
                 'category.context_processors.menu_links',
-                'carts.context_processors.cart_preview'
+                'carts.context_processors.cart_preview',
+                'accounts.context_processors.wishlist',
             ],
         },
     },
@@ -143,7 +145,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / 'static'
+    BASE_DIR / 'static/'
 ]
 
 # Media files

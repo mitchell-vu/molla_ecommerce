@@ -24,12 +24,12 @@
                   {% csrf_token %}
                   <div class="form-group">
                     <label for="singin-email-2">Email address *</label>
-                    <input type="text" class="form-control" id="singin-email-2" name="email" required>
+                    <input type="text" class="form-control" id="singin-email" name="email" required>
                   </div><!-- End .form-group -->
 
                   <div class="form-group">
                     <label for="singin-password-2">Password *</label>
-                    <input type="password" class="form-control" id="singin-password-2" name="password" required>
+                    <input type="password" class="form-control" id="singin-password" name="password" required>
                   </div><!-- End .form-group -->
 
                   <div class="form-footer">
@@ -39,7 +39,7 @@
                     </button>
 
                     <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" id="signin-remember-2">
+                      <input type="checkbox" class="custom-control-input" id="signin-remember">
                       <label class="custom-control-label" for="signin-remember-2">Remember Me</label>
                     </div><!-- End .custom-checkbox -->
 
@@ -71,24 +71,23 @@
                 <form action="{% url 'signup' %}" method="POST">
                   {% csrf_token %}
                   <div class="form-group">
-                    <label for="register-email-2">Your Name *</label>
-                    <input name="full_name" type="text" class="form-control" id="register-email-2" required>
+                    <label for="register-name">Your Name *</label>
+                    <input name="full_name" type="text" class="form-control" id="register-name" required>
                   </div><!-- End .form-group -->
 
                   <div class="form-group">
-                    <label for="register-email-2">Your email address *</label>
-                    <input name="email" type="email" class="form-control" id="register-email-2" required>
+                    <label for="register-email">Your email address *</label>
+                    <input name="email" type="email" class="form-control" id="register-email" required>
                   </div><!-- End .form-group -->
 
                   <div class="form-group">
                     <label for="register-password-1">Password *</label>
-                    <input name="password" type="password" class="form-control" id="register-password-1" required>
+                    <input name="password" type="password" class="form-control" id="register-password" required>
                   </div><!-- End .form-group -->
 
                   <div class="form-group">
                     <label for="register-password-2">Password Confirmation *</label>
-                    <input name="password_confirmation" type="password" class="form-control" id="register-password-2"
-                      name="register-password" required>
+                    <input name="password_confirmation" type="password" class="form-control" id="register-password-confirmation" required>
                   </div><!-- End .form-group -->
 
                   {% include 'include/alerts.html' %}

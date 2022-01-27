@@ -1001,5 +1001,107 @@
       "is_active": true,
       "variations": []
     }
+  },
+  {
+    "model": "accounts.account",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$rbXmeUJLdeQhTVrfzHz6Pu$ZSGI8rftxRfPuvupUSAg/ukuHVXTeBZTlC13244RU/0=",
+      "full_name": "Vũ Minh Hiếu",
+      "email": "mitchell.vu0208@gmail.com",
+      "phone_number": "0915825534",
+      "address": "325 Kim Ngưu",
+      "province": "Hai Bà Trưng",
+      "city": "Hà Nội",
+      "date_joined": "2022-01-02T17:07:16.117Z",
+      "last_login": "2022-01-27T15:09:09.460Z",
+      "is_admin": true,
+      "is_staff": true
+    }
+  },
+  {
+    "model": "accounts.account",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$DqnXfJt4X75OD0MvoF2E1i$pRMjdC0S2EOXvdWoBFwXPgpQmSmWm1rc4gNvFKKwVwY=",
+      "full_name": "Hieu",
+      "email": "admin2@admin.com",
+      "phone_number": null,
+      "address": null,
+      "province": null,
+      "city": null,
+      "date_joined": "2022-01-26T17:01:52.999Z",
+      "last_login": "2022-01-26T17:04:03.762Z",
+      "is_admin": false,
+      "is_staff": false
+    }
+  },
+  {
+    "model": "accounts.account",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$LeMK0B17LUrvCFBCGW9mra$i+0XdmrRHwolT/Ken9W8lHENd47zhN1IZkDtSePteBo=",
+      "full_name": "hieu",
+      "email": "hieuvm@dyno.vn",
+      "phone_number": null,
+      "address": null,
+      "province": null,
+      "city": null,
+      "date_joined": "2022-01-26T17:10:04.855Z",
+      "last_login": "2022-01-26T17:10:04.875Z",
+      "is_admin": false,
+      "is_staff": false
+    }
+  },
+  {
+    "model": "accounts.account",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$IFQZfbkYBS8SoXbB0A2icb$3LWuPEosYnziP0aBjGpAXWK1SfKTRTPeY2uRYrY9kMc=",
+      "full_name": "Mitchell",
+      "email": "hieuvm13.mac@gmail.com",
+      "phone_number": null,
+      "address": null,
+      "province": null,
+      "city": null,
+      "date_joined": "2022-01-26T17:24:31.736Z",
+      "last_login": "2022-01-26T17:24:31.755Z",
+      "is_admin": false,
+      "is_staff": false
+    }
+  },
+  {
+    "model": "accounts.account",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$Wp2vapzUT7VYP9oKlQMFqg$hpdYZ0XHL4nKSvDfaM6By8jyjtZvWvNek8Fj6p0Vfx4=",
+      "full_name": "Hieu",
+      "email": "test@test.com",
+      "phone_number": null,
+      "address": null,
+      "province": null,
+      "city": null,
+      "date_joined": "2022-01-27T15:07:04.255Z",
+      "last_login": "2022-01-27T15:07:33.654Z",
+      "is_admin": false,
+      "is_staff": false
+    }
+  },
+  {
+    "model": "accounts.account",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$n7giXuVH84cKZQFaS2PwJK$EDmYshN4BkTFMg2l/haI1CtlQmnw88wgK5zZNc0dfqI=",
+      "full_name": "hieu",
+      "email": "testing@test.com",
+      "phone_number": null,
+      "address": null,
+      "province": null,
+      "city": null,
+      "date_joined": "2022-01-27T15:20:09.572Z",
+      "last_login": "2022-01-27T15:20:46.322Z",
+      "is_admin": true,
+      "is_staff": true
+    }
   }
 ]

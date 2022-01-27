@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractBaseUser
 
+from store.models import Product
+
 # Create your models here.
 
 
@@ -63,3 +65,11 @@ class Account(AbstractBaseUser):
 
     def has_module_perms(self, add_label):
         return True
+
+
+class Wishlist(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    user = models.ForeignKey(Account, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.product.product_name

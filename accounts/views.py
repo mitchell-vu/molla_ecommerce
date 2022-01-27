@@ -10,7 +10,7 @@ from django.core.mail import EmailMessage
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.tokens import default_token_generator
 
-from accounts.models import Account
+from accounts.models import Account, Wishlist
 from orders.models import Order
 from carts.views import _cart_id
 
@@ -136,8 +136,15 @@ def logout(request):
 
 @login_required(login_url='login')
 def wishlist(request):
+    userWishlist = Wishlist.objects.filter(user=request.user)
     context = {
-
+        'wishlist': userWishlist,
     }
 
     return render(request, 'accounts/wishlist.html', context)
+
+
+@login_required(login_url='login')
+def add_wishlist(request):
+    
+    return redirect('wishlist')

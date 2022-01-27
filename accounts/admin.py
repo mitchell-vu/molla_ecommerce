@@ -16,3 +16,4 @@ class AccountAdmin(UserAdmin):
     fieldsets = ()
 
 admin.site.register(Account, AccountAdmin)
+admin.site.register(Wishlist)

@@ -9,3 +9,5 @@ Tạo admin: python3 manage.py createsuperuser
 
 
 config database ở trong phần molla_theme/setting.py
+
+❯ python manage.py dumpdata orders store category carts accounts > data_dump.json
