@@ -1,0 +1,1005 @@
+[
+  {
+    "model": "orders.order",
+    "pk": 11,
+    "fields": {
+      "user": 1,
+      "payment": null,
+      "order_number": "2022012611",
+      "full_name": "Vũ Minh Hiếu",
+      "phone": "0915825534",
+      "email": "mitchell.vu0208@gmail.com",
+      "address": "325 Kim Ngưu",
+      "province": "Hai Bà Trưng",
+      "city": "Hà Nội",
+      "order_note": "",
+      "order_total": 50480000.0,
+      "status": "New",
+      "ip": "127.0.0.1",
+      "is_ordered": true,
+      "created_at": "2022-01-26T07:24:06.783Z",
+      "updated_at": "2022-01-26T07:24:06.786Z"
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 12,
+    "fields": {
+      "user": 1,
+      "payment": null,
+      "order_number": "2022012612",
+      "full_name": "Vũ Minh Hiếu",
+      "phone": "0915825534",
+      "email": "mitchell.vu0208@gmail.com",
+      "address": "325 Kim Ngưu",
+      "province": "Hai Bà Trưng",
+      "city": "Hà Nội",
+      "order_note": "",
+      "order_total": 32000000.0,
+      "status": "New",
+      "ip": "127.0.0.1",
+      "is_ordered": true,
+      "created_at": "2022-01-26T09:28:52.895Z",
+      "updated_at": "2022-01-26T09:28:52.899Z"
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 13,
+    "fields": {
+      "user": 5,
+      "payment": null,
+      "order_number": "2022012713",
+      "full_name": "Hieu",
+      "phone": "0915825534",
+      "email": "test@test.com",
+      "address": "sffg",
+      "province": "sdgd",
+      "city": "asgdfg",
+      "order_note": "",
+      "order_total": 75000000.0,
+      "status": "New",
+      "ip": "127.0.0.1",
+      "is_ordered": true,
+      "created_at": "2022-01-27T15:08:16.650Z",
+      "updated_at": "2022-01-27T15:08:16.653Z"
+    }
+  },
+  {
+    "model": "orders.orderproduct",
+    "pk": 4,
+    "fields": {
+      "order": 11,
+      "payment": null,
+      "product": 3,
+      "quantity": 1,
+      "product_price": 21500000.0,
+      "ordered": true,
+      "created_at": "2022-01-26T07:24:06.790Z",
+      "updated_at": "2022-01-26T07:24:06.794Z",
+      "variations": []
+    }
+  },
+  {
+    "model": "orders.orderproduct",
+    "pk": 5,
+    "fields": {
+      "order": 11,
+      "payment": null,
+      "product": 5,
+      "quantity": 1,
+      "product_price": 4990000.0,
+      "ordered": true,
+      "created_at": "2022-01-26T07:24:06.801Z",
+      "updated_at": "2022-01-26T07:24:06.805Z",
+      "variations": []
+    }
+  },
+  {
+    "model": "orders.orderproduct",
+    "pk": 6,
+    "fields": {
+      "order": 11,
+      "payment": null,
+      "product": 4,
+      "quantity": 1,
+      "product_price": 23990000.0,
+      "ordered": true,
+      "created_at": "2022-01-26T07:24:06.809Z",
+      "updated_at": "2022-01-26T07:24:06.812Z",
+      "variations": []
+    }
+  },
+  {
+    "model": "orders.orderproduct",
+    "pk": 7,
+    "fields": {
+      "order": 12,
+      "payment": null,
+      "product": 2,
+      "quantity": 1,
+      "product_price": 32000000.0,
+      "ordered": true,
+      "created_at": "2022-01-26T09:28:52.901Z",
+      "updated_at": "2022-01-26T09:28:52.907Z",
+      "variations": []
+    }
+  },
+  {
+    "model": "orders.orderproduct",
+    "pk": 8,
+    "fields": {
+      "order": 13,
+      "payment": null,
+      "product": 2,
+      "quantity": 1,
+      "product_price": 32000000.0,
+      "ordered": true,
+      "created_at": "2022-01-27T15:08:16.658Z",
+      "updated_at": "2022-01-27T15:08:16.669Z",
+      "variations": []
+    }
+  },
+  {
+    "model": "orders.orderproduct",
+    "pk": 9,
+    "fields": {
+      "order": 13,
+      "payment": null,
+      "product": 3,
+      "quantity": 2,
+      "product_price": 21500000.0,
+      "ordered": true,
+      "created_at": "2022-01-27T15:08:16.676Z",
+      "updated_at": "2022-01-27T15:08:16.679Z",
+      "variations": []
+    }
+  },
+  {
+    "model": "store.brand",
+    "pk": 1,
+    "fields": { "brand_name": "Apple", "slug": "apple" }
+  },
+  {
+    "model": "store.brand",
+    "pk": 2,
+    "fields": { "brand_name": "Samsung", "slug": "samsung" }
+  },
+  {
+    "model": "store.brand",
+    "pk": 3,
+    "fields": { "brand_name": "Xiaomi", "slug": "xiaomi" }
+  },
+  {
+    "model": "store.brand",
+    "pk": 4,
+    "fields": { "brand_name": "Asus", "slug": "Asus" }
+  },
+  {
+    "model": "store.product",
+    "pk": 1,
+    "fields": {
+      "product_name": "iPhone 13 128GB | Chính hãng VN/A",
+      "slug": "iphone-13-128gb",
+      "brand": 1,
+      "description": "",
+      "price": 22700000,
+      "images": "photos/products/iphone-13-128gb.jpeg",
+      "stock": 8,
+      "is_available": true,
+      "category": 1,
+      "created_date": "2022-01-03T13:39:08.614Z",
+      "modified_date": "2022-01-26T07:22:08.997Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 2,
+    "fields": {
+      "product_name": "iPhone 13 Pro Max | Chính hãng VN/A",
+      "slug": "iphone-13-pro-max-128gb",
+      "brand": 1,
+      "description": "",
+      "price": 32000000,
+      "images": "photos/products/iphone-13-pro-max-128gb.jpeg",
+      "stock": 10,
+      "is_available": true,
+      "category": 1,
+      "created_date": "2022-01-03T13:43:45.626Z",
+      "modified_date": "2022-01-27T15:08:16.672Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 3,
+    "fields": {
+      "product_name": "Samsung Galaxy Note 20 Ultra 5G",
+      "slug": "samsung-galaxy-note-20-ultra-5g",
+      "brand": 2,
+      "description": "",
+      "price": 21500000,
+      "images": "photos/products/samsung-galaxy-note-20-ultra-5g.jpeg",
+      "stock": 17,
+      "is_available": true,
+      "category": 1,
+      "created_date": "2022-01-03T13:45:43.972Z",
+      "modified_date": "2022-01-27T15:08:16.681Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 4,
+    "fields": {
+      "product_name": "Samsung Galaxy Z Flip3 5G",
+      "slug": "samsung-galaxy-z-flip3-5g",
+      "brand": 2,
+      "description": "",
+      "price": 23990000,
+      "images": "photos/products/samsung-galaxy-z-flip-3.webp",
+      "stock": 12,
+      "is_available": true,
+      "category": 1,
+      "created_date": "2022-01-03T13:47:17.434Z",
+      "modified_date": "2022-01-26T07:24:06.813Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 5,
+    "fields": {
+      "product_name": "Apple AirPods Pro VN/A",
+      "slug": "apple-airpods-pro",
+      "brand": 1,
+      "description": "",
+      "price": 4990000,
+      "images": "photos/products/apple-airpods-pro.jpeg",
+      "stock": 16,
+      "is_available": true,
+      "category": 5,
+      "created_date": "2022-01-03T13:49:10.956Z",
+      "modified_date": "2022-01-26T07:24:06.807Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 6,
+    "fields": {
+      "product_name": "Tai nghe chụp tai chống ồn Apple AirPods Max | Chính hãng Apple Việt Nam",
+      "slug": "apple-airpods-max",
+      "brand": 1,
+      "description": "",
+      "price": 10990000,
+      "images": "photos/products/apple-airpods-max.jpeg",
+      "stock": 5,
+      "is_available": true,
+      "category": 5,
+      "created_date": "2022-01-03T13:50:17.687Z",
+      "modified_date": "2022-01-10T13:04:30.435Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 7,
+    "fields": {
+      "product_name": "Tai nghe không dây Samsung Galaxy Buds 2",
+      "slug": "samsung-galaxy-buds-2",
+      "brand": 2,
+      "description": "",
+      "price": 2090000,
+      "images": "photos/products/samsung-galaxy-buds-2.webp",
+      "stock": 5,
+      "is_available": true,
+      "category": 5,
+      "created_date": "2022-01-03T13:52:23.221Z",
+      "modified_date": "2022-01-10T13:04:24.237Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 8,
+    "fields": {
+      "product_name": "Macbook Pro 14 M1 Pro 10 CPU - 16 GPU 16GB 1TB 2021 | Chính hãng Apple Việt Nam",
+      "slug": "macbook-pro-14-inch-2021-1tb",
+      "brand": 1,
+      "description": "",
+      "price": 65990000,
+      "images": "photos/products/macbook-pro-14-inch-2021-1tb.jpeg",
+      "stock": 6,
+      "is_available": true,
+      "category": 2,
+      "created_date": "2022-01-03T13:54:56.723Z",
+      "modified_date": "2022-01-10T13:04:12.917Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 9,
+    "fields": {
+      "product_name": "Samsung Galaxy Watch 4",
+      "slug": "samsung-galaxy-watch-4",
+      "brand": 2,
+      "description": "",
+      "price": 6190000,
+      "images": "photos/products/samsung-galaxy-watch-4.jpeg",
+      "stock": 4,
+      "is_available": true,
+      "category": 6,
+      "created_date": "2022-01-03T13:56:41.056Z",
+      "modified_date": "2022-01-10T13:04:08.431Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 10,
+    "fields": {
+      "product_name": "Apple Watch Series 7 41mm (GPS) Viền nhôm dây cao su | Chính hãng VN/A",
+      "slug": "apple-watch-series-7-41mm",
+      "brand": 1,
+      "description": "",
+      "price": 10590000,
+      "images": "photos/products/apple-watch-series-7-41mm.jpeg",
+      "stock": 12,
+      "is_available": true,
+      "category": 6,
+      "created_date": "2022-01-03T13:58:27.867Z",
+      "modified_date": "2022-01-10T13:04:02.419Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 11,
+    "fields": {
+      "product_name": "iPhone 11 64GB | Chính hãng VN/A",
+      "slug": "iphone-11-64gb",
+      "brand": 1,
+      "description": "",
+      "price": 14700000,
+      "images": "photos/products/iphone-11-64GB.webp",
+      "stock": 20,
+      "is_available": true,
+      "category": 1,
+      "created_date": "2022-01-09T03:50:25.518Z",
+      "modified_date": "2022-01-10T13:03:53.313Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 12,
+    "fields": {
+      "product_name": "Xiaomi Redmi Note 10 5G 4GB",
+      "slug": "xiaomi-redmi-note-10-5g-4gb",
+      "brand": 3,
+      "description": "",
+      "price": 4950000,
+      "images": "photos/products/redmi-note-10-5g.jpeg",
+      "stock": 1,
+      "is_available": true,
+      "category": 1,
+      "created_date": "2022-01-09T04:34:27.851Z",
+      "modified_date": "2022-01-10T13:03:46.859Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 13,
+    "fields": {
+      "product_name": "ASUS ROG Phone 5 chính hãng",
+      "slug": "asus-rog-phone-5",
+      "brand": 4,
+      "description": "",
+      "price": 18990000,
+      "images": "photos/products/asus-rog-phone-5.jpeg",
+      "stock": 23,
+      "is_available": true,
+      "category": 1,
+      "created_date": "2022-01-09T04:42:14.923Z",
+      "modified_date": "2022-01-10T13:03:37.325Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 14,
+    "fields": {
+      "product_name": "Samsung Galaxy A72",
+      "slug": "samsung-galaxy-a72",
+      "brand": 2,
+      "description": "",
+      "price": 10100000,
+      "images": "photos/products/samsung-galaxy-a72.jpeg",
+      "stock": 2,
+      "is_available": true,
+      "category": 1,
+      "created_date": "2022-01-09T04:52:43.356Z",
+      "modified_date": "2022-01-10T13:03:22.393Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 15,
+    "fields": {
+      "product_name": "Samsung Galaxy S21 Ultra 5G",
+      "slug": "samsung-galaxy-s21-ultra-5g",
+      "brand": 2,
+      "description": "",
+      "price": 25100000,
+      "images": "photos/products/samsung-galaxy-s21-ultra.jpeg",
+      "stock": 21,
+      "is_available": true,
+      "category": 1,
+      "created_date": "2022-01-09T13:33:50.535Z",
+      "modified_date": "2022-01-10T13:03:17.708Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 16,
+    "fields": {
+      "product_name": "Samsung Galaxy S20 FE 256GB (Fan Edition)",
+      "slug": "samsung-galaxy-s20-fe",
+      "brand": 2,
+      "description": "",
+      "price": 12700000,
+      "images": "photos/products/samsung-galaxy-20-fe.jpeg",
+      "stock": 12,
+      "is_available": true,
+      "category": 1,
+      "created_date": "2022-01-09T13:35:43.212Z",
+      "modified_date": "2022-01-10T13:03:07.509Z"
+    }
+  },
+  {
+    "model": "store.product",
+    "pk": 17,
+    "fields": {
+      "product_name": "Samsung Galaxy Z Fold3 5G",
+      "slug": "samsung-galaxy-z-fold3-5g",
+      "brand": 2,
+      "description": "",
+      "price": 40490000,
+      "images": "photos/products/samsung-galaxy-z-fold-3-white.jpeg",
+      "stock": 12,
+      "is_available": true,
+      "category": 1,
+      "created_date": "2022-01-09T13:37:12.493Z",
+      "modified_date": "2022-01-10T13:03:01.839Z"
+    }
+  },
+  {
+    "model": "store.variationcategory",
+    "pk": 3,
+    "fields": { "category_name": "Color", "display": "Màu sắc" }
+  },
+  {
+    "model": "store.variationcategory",
+    "pk": 4,
+    "fields": { "category_name": "Storage", "display": "Dung lượng bộ nhớ" }
+  },
+  {
+    "model": "store.variation",
+    "pk": 1,
+    "fields": {
+      "product": 2,
+      "variation_category": 3,
+      "variation_value": "Đen",
+      "variation_image": "photos/products/iphone-13-pro-max-128gb/iphone-13-pro-max-graphite.jpeg",
+      "stock": 12,
+      "is_active": true,
+      "created_date": "2022-01-10T14:41:52.459Z"
+    }
+  },
+  {
+    "model": "store.variation",
+    "pk": 2,
+    "fields": {
+      "product": 2,
+      "variation_category": 3,
+      "variation_value": "Xanh dương",
+      "variation_image": "photos/products/iphone-13-pro-max-128gb/iphone-13-pro-max-blue.jpeg",
+      "stock": 12,
+      "is_active": true,
+      "created_date": "2022-01-10T16:11:44.946Z"
+    }
+  },
+  {
+    "model": "store.variation",
+    "pk": 3,
+    "fields": {
+      "product": 2,
+      "variation_category": 3,
+      "variation_value": "Vàng",
+      "variation_image": "photos/products/iphone-13-pro-max-128gb/iphone-13-pro-max-gold.jpeg",
+      "stock": 10,
+      "is_active": true,
+      "created_date": "2022-01-10T16:12:31.448Z"
+    }
+  },
+  {
+    "model": "store.variation",
+    "pk": 4,
+    "fields": {
+      "product": 2,
+      "variation_category": 3,
+      "variation_value": "Trắng",
+      "variation_image": "photos/products/iphone-13-pro-max-128gb/iphone-13-pro-max-white.jpeg",
+      "stock": 13,
+      "is_active": true,
+      "created_date": "2022-01-10T16:12:46.101Z"
+    }
+  },
+  {
+    "model": "store.variation",
+    "pk": 5,
+    "fields": {
+      "product": 1,
+      "variation_category": 3,
+      "variation_value": "Hồng",
+      "variation_image": "photos/products/iphone-13-128gb/iphone-13-128gb.jpeg",
+      "stock": 12,
+      "is_active": true,
+      "created_date": "2022-01-10T16:17:29.725Z"
+    }
+  },
+  {
+    "model": "store.variation",
+    "pk": 6,
+    "fields": {
+      "product": 1,
+      "variation_category": 3,
+      "variation_value": "Xanh dương",
+      "variation_image": "photos/products/iphone-13-128gb/iphone-13-blue.jpeg",
+      "stock": 4,
+      "is_active": true,
+      "created_date": "2022-01-10T16:17:45.890Z"
+    }
+  },
+  {
+    "model": "store.variation",
+    "pk": 7,
+    "fields": {
+      "product": 1,
+      "variation_category": 3,
+      "variation_value": "Trắng",
+      "variation_image": "photos/products/iphone-13-128gb/iphone-13-white.jpeg",
+      "stock": 2,
+      "is_active": true,
+      "created_date": "2022-01-10T16:19:08.393Z"
+    }
+  },
+  {
+    "model": "store.variation",
+    "pk": 8,
+    "fields": {
+      "product": 1,
+      "variation_category": 3,
+      "variation_value": "Đỏ",
+      "variation_image": "photos/products/iphone-13-128gb/iphone-13-red.jpeg",
+      "stock": 23,
+      "is_active": true,
+      "created_date": "2022-01-10T16:19:30.728Z"
+    }
+  },
+  {
+    "model": "store.variation",
+    "pk": 9,
+    "fields": {
+      "product": 1,
+      "variation_category": 3,
+      "variation_value": "Đen",
+      "variation_image": "photos/products/iphone-13-128gb/iphone-13-black.jpeg",
+      "stock": 56,
+      "is_active": true,
+      "created_date": "2022-01-10T16:19:49.615Z"
+    }
+  },
+  {
+    "model": "category.category",
+    "pk": 1,
+    "fields": {
+      "category_name": "Điện thoại",
+      "slug": "dien-thoai",
+      "description": "",
+      "category_image": ""
+    }
+  },
+  {
+    "model": "category.category",
+    "pk": 2,
+    "fields": {
+      "category_name": "Laptop",
+      "slug": "laptop",
+      "description": "",
+      "category_image": ""
+    }
+  },
+  {
+    "model": "category.category",
+    "pk": 3,
+    "fields": {
+      "category_name": "PC - Linh kiện",
+      "slug": "may-tinh-de-ban",
+      "description": "",
+      "category_image": ""
+    }
+  },
+  {
+    "model": "category.category",
+    "pk": 4,
+    "fields": {
+      "category_name": "Tablet",
+      "slug": "tablet",
+      "description": "",
+      "category_image": ""
+    }
+  },
+  {
+    "model": "category.category",
+    "pk": 5,
+    "fields": {
+      "category_name": "Âm thanh",
+      "slug": "thiet-bi-am-thanh",
+      "description": "",
+      "category_image": ""
+    }
+  },
+  {
+    "model": "category.category",
+    "pk": 6,
+    "fields": {
+      "category_name": "Đồng hồ",
+      "slug": "dong-ho-thong-minh",
+      "description": "",
+      "category_image": ""
+    }
+  },
+  {
+    "model": "category.category",
+    "pk": 7,
+    "fields": {
+      "category_name": "Phụ kiện",
+      "slug": "phu-kien",
+      "description": "",
+      "category_image": ""
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 10,
+    "fields": {
+      "cart_id": "oqr4nwmnq6fm23w3uxn99okru39vuyd1",
+      "user": 1,
+      "date_added": "2022-01-26T07:04:27.881Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 11,
+    "fields": {
+      "cart_id": "le9ooevvf4bhmjef6jh1jj6qtav1vm9m",
+      "user": null,
+      "date_added": "2022-01-26T07:11:54.803Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 12,
+    "fields": {
+      "cart_id": "06p6sbtohivs7falu47od9kt4lhl9z0h",
+      "user": null,
+      "date_added": "2022-01-26T15:19:56.958Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 13,
+    "fields": {
+      "cart_id": "jc6vee6i55qae3d3vustj7sjgsnp8uqj",
+      "user": null,
+      "date_added": "2022-01-26T16:38:30.058Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 14,
+    "fields": {
+      "cart_id": "p7l632tp1ku166eb4ifh8rfs285m3y54",
+      "user": null,
+      "date_added": "2022-01-26T16:40:05.863Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 15,
+    "fields": {
+      "cart_id": "fpdo0jakhjdg9p7bdbo0cpy4udoahr10",
+      "user": null,
+      "date_added": "2022-01-26T16:41:39.829Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 16,
+    "fields": {
+      "cart_id": "9c2y9l54duc7f1z0vcpa6gfj4w5tlaw2",
+      "user": null,
+      "date_added": "2022-01-26T16:45:17.380Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 17,
+    "fields": {
+      "cart_id": "bai69k101v47pkbdhk4tmynol5u0m41a",
+      "user": null,
+      "date_added": "2022-01-26T16:47:02.243Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 18,
+    "fields": {
+      "cart_id": "h08zygfn01zarqlvbla6rzum03vzmren",
+      "user": null,
+      "date_added": "2022-01-26T16:48:51.559Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 19,
+    "fields": {
+      "cart_id": "3vixocmljyi09owx0ih98vn4a5lyrz5p",
+      "user": null,
+      "date_added": "2022-01-26T17:04:03.778Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 20,
+    "fields": {
+      "cart_id": "xtvv45mjnj3hjw7obtnwyy19t3l12v9g",
+      "user": null,
+      "date_added": "2022-01-26T17:04:16.618Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 21,
+    "fields": {
+      "cart_id": "xikhu0ccsjubkt40lvt5fpg0wnnyfr4u",
+      "user": null,
+      "date_added": "2022-01-26T17:10:04.892Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 22,
+    "fields": {
+      "cart_id": "xikhu0ccsjubkt40lvt5fpg0wnnyfr4u",
+      "user": null,
+      "date_added": "2022-01-26T17:10:09.213Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 23,
+    "fields": {
+      "cart_id": "xikhu0ccsjubkt40lvt5fpg0wnnyfr4u",
+      "user": null,
+      "date_added": "2022-01-26T17:10:13.230Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 24,
+    "fields": {
+      "cart_id": "xikhu0ccsjubkt40lvt5fpg0wnnyfr4u",
+      "user": null,
+      "date_added": "2022-01-26T17:10:19.697Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 25,
+    "fields": {
+      "cart_id": "xikhu0ccsjubkt40lvt5fpg0wnnyfr4u",
+      "user": null,
+      "date_added": "2022-01-26T17:11:04.428Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 26,
+    "fields": {
+      "cart_id": "",
+      "user": 3,
+      "date_added": "2022-01-26T17:11:13.067Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 27,
+    "fields": {
+      "cart_id": "gcjdmhyrbtqp2ripc78s954nn4g3pvdr",
+      "user": null,
+      "date_added": "2022-01-26T17:15:59.059Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 28,
+    "fields": {
+      "cart_id": "trxccke4zsopdbou7m0ssegivzmagagl",
+      "user": null,
+      "date_added": "2022-01-26T17:24:31.771Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 29,
+    "fields": {
+      "cart_id": "trxccke4zsopdbou7m0ssegivzmagagl",
+      "user": null,
+      "date_added": "2022-01-26T17:24:36.056Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 30,
+    "fields": {
+      "cart_id": "trxccke4zsopdbou7m0ssegivzmagagl",
+      "user": null,
+      "date_added": "2022-01-26T17:24:42.089Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 31,
+    "fields": {
+      "cart_id": "trxccke4zsopdbou7m0ssegivzmagagl",
+      "user": null,
+      "date_added": "2022-01-26T17:56:25.520Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 32,
+    "fields": {
+      "cart_id": "trxccke4zsopdbou7m0ssegivzmagagl",
+      "user": null,
+      "date_added": "2022-01-26T17:57:54.615Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 33,
+    "fields": {
+      "cart_id": "ld37san82f7ldzewhni8b5498hphybow",
+      "user": null,
+      "date_added": "2022-01-27T15:03:44.444Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 34,
+    "fields": {
+      "cart_id": "fkpl5o2ecm1sojnlwv9g1cinczfo7r3m",
+      "user": null,
+      "date_added": "2022-01-27T15:07:04.294Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 35,
+    "fields": {
+      "cart_id": "fkpl5o2ecm1sojnlwv9g1cinczfo7r3m",
+      "user": null,
+      "date_added": "2022-01-27T15:07:10.678Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 36,
+    "fields": {
+      "cart_id": "fkpl5o2ecm1sojnlwv9g1cinczfo7r3m",
+      "user": null,
+      "date_added": "2022-01-27T15:07:14.467Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 37,
+    "fields": {
+      "cart_id": "kftsaxoiwaw60n6584d3sukw1bax8y4f",
+      "user": null,
+      "date_added": "2022-01-27T15:07:23.232Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 38,
+    "fields": {
+      "cart_id": "bdqv8puvybta8ab9f3ck378m2dic3mr2",
+      "user": null,
+      "date_added": "2022-01-27T15:07:33.669Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 39,
+    "fields": {
+      "cart_id": "bdqv8puvybta8ab9f3ck378m2dic3mr2",
+      "user": null,
+      "date_added": "2022-01-27T15:07:37.602Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 40,
+    "fields": {
+      "cart_id": "",
+      "user": 5,
+      "date_added": "2022-01-27T15:07:40.757Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 41,
+    "fields": {
+      "cart_id": "w2sq425c81hv805gkuyhm0temxgs42fb",
+      "user": null,
+      "date_added": "2022-01-27T15:08:51.030Z"
+    }
+  },
+  {
+    "model": "carts.cart",
+    "pk": 42,
+    "fields": {
+      "cart_id": "tqzoq1si0d4bdw4rum28x58ycmxnftso",
+      "user": null,
+      "date_added": "2022-01-27T15:20:31.587Z"
+    }
+  },
+  {
+    "model": "carts.cartitem",
+    "pk": 36,
+    "fields": {
+      "product": 2,
+      "cart": 10,
+      "quantity": 1,
+      "is_active": true,
+      "variations": []
+    }
+  },
+  {
+    "model": "carts.cartitem",
+    "pk": 37,
+    "fields": {
+      "product": 1,
+      "cart": 26,
+      "quantity": 4,
+      "is_active": true,
+      "variations": [7]
+    }
+  },
+  {
+    "model": "carts.cartitem",
+    "pk": 38,
+    "fields": {
+      "product": 1,
+      "cart": 33,
+      "quantity": 3,
+      "is_active": true,
+      "variations": [6]
+    }
+  },
+  {
+    "model": "carts.cartitem",
+    "pk": 39,
+    "fields": {
+      "product": 5,
+      "cart": 33,
+      "quantity": 2,
+      "is_active": true,
+      "variations": []
+    }
+  }
+]

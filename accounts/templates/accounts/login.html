@@ -14,33 +14,32 @@
 </nav><!-- End .breadcrumb-nav -->
 
 <div class="login-page bg-image pt-8 pb-8 pt-md-12 pb-md-12 pt-lg-17 pb-lg-17"
-    style="background-image: url('assets/images/backgrounds/login-bg.jpg')">
+    style="background-image: url({% static 'assets/images/backgrounds/login-bg.jpg' %})">
     <div class="container">
         <div class="form-box">
             <div class="form-tab">
                 <ul class="nav nav-pills nav-fill" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link" id="signin-tab-2" data-toggle="tab" href="#signin-2" role="tab"
+                        <a class="nav-link active" id="signin-tab-2" data-toggle="tab" href="#signin-2" role="tab"
                             aria-controls="signin-2" aria-selected="false">Sign In</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" id="register-tab-2" data-toggle="tab" href="#register-2" role="tab"
+                        <a class="nav-link" id="register-tab-2" data-toggle="tab" href="#register-2" role="tab"
                             aria-controls="register-2" aria-selected="true">Register</a>
                     </li>
                 </ul>
                 <div class="tab-content">
-                    <div class="tab-pane fade" id="signin-2" role="tabpanel" aria-labelledby="signin-tab-2">
-                        <form action="#">
+                    <div class="tab-pane fade show active" id="signin-2" role="tabpanel" aria-labelledby="signin-tab-2">
+                        <form action="{% url 'login' %}" method="post">
+                            {% csrf_token %}
                             <div class="form-group">
-                                <label for="singin-email-2">Username or email address *</label>
-                                <input type="text" class="form-control" id="singin-email-2" name="singin-email"
-                                    required>
+                                <label for="singin-email-2">Email address *</label>
+                                <input type="text" class="form-control" id="singin-email-2" name="email" required>
                             </div><!-- End .form-group -->
 
                             <div class="form-group">
                                 <label for="singin-password-2">Password *</label>
-                                <input type="password" class="form-control" id="singin-password-2"
-                                    name="singin-password" required>
+                                <input type="password" class="form-control" id="singin-password-2" name="password" required>
                             </div><!-- End .form-group -->
 
                             <div class="form-footer">
@@ -55,6 +54,9 @@
                                 </div><!-- End .custom-checkbox -->
 
                                 <a href="#" class="forgot-link">Forgot Your Password?</a>
+
+                                {% include 'include/alerts.html' %}
+                                
                             </div><!-- End .form-footer -->
                         </form>
                         <div class="form-choice">
@@ -75,20 +77,32 @@
                             </div><!-- End .row -->
                         </div><!-- End .form-choice -->
                     </div><!-- .End .tab-pane -->
-                    <div class="tab-pane fade show active" id="register-2" role="tabpanel"
+                    <div class="tab-pane fade" id="register-2" role="tabpanel"
                         aria-labelledby="register-tab-2">
-                        <form action="#">
+                        <form action="{% url 'signup' %}" method="POST">
+                            {% csrf_token %}
                             <div class="form-group">
-                                <label for="register-email-2">Your email address *</label>
-                                <input type="email" class="form-control" id="register-email-2" name="register-email"
-                                    required>
+                                <label for="register-email-2">Your Name *</label>
+                                <input name="full_name" type="text" class="form-control" id="register-email-2" required>
                             </div><!-- End .form-group -->
 
                             <div class="form-group">
-                                <label for="register-password-2">Password *</label>
-                                <input type="password" class="form-control" id="register-password-2"
+                                <label for="register-email-2">Your email address *</label>
+                                <input name="email" type="email" class="form-control" id="register-email-2" required>
+                            </div><!-- End .form-group -->
+
+                            <div class="form-group">
+                                <label for="register-password-1">Password *</label>
+                                <input name="password" type="password" class="form-control" id="register-password-1" required>
+                            </div><!-- End .form-group -->
+
+                            <div class="form-group">
+                                <label for="register-password-2">Password Confirmation *</label>
+                                <input name="password_confirmation" type="password" class="form-control" id="register-password-2"
                                     name="register-password" required>
                             </div><!-- End .form-group -->
+
+                            {% include 'include/alerts.html' %}
 
                             <div class="form-footer">
                                 <button type="submit" class="btn btn-outline-primary-2">
@@ -98,8 +112,7 @@
 
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="register-policy-2" required>
-                                    <label class="custom-control-label" for="register-policy-2">I agree to the <a
-                                            href="#">privacy policy</a> *</label>
+                                    <label class="custom-control-label" for="register-policy-2">I agree to the <a href="#">privacy policy</a> *</label>
                                 </div><!-- End .custom-checkbox -->
                             </div><!-- End .form-footer -->
                         </form>

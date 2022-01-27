@@ -93,7 +93,7 @@ DATABASES = {
     # },
     'default': {
         'ENGINE': "django.db.backends.mysql",
-        'NAME': "molla_ecommerce",
+        'NAME': "molla_ecommerce",  # Phải tạo trước một cái database tên như thế (PHPmyadmin)
         'HOST': "localhost",
         'PORT': "3306",
         'USER': "root",

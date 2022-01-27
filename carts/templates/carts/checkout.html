@@ -28,7 +28,7 @@
               code</span></label>
         </form>
       </div><!-- End .checkout-discount -->
-      <form action="{% url 'place_order' %}" method="POST">
+      <form action="{% url 'place_order' %}" method="post">
         {% csrf_token %}
         <div class="row">
           <div class="col-lg-9">

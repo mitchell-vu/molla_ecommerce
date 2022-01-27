@@ -159,7 +159,7 @@ def remove_cart_item(request, cart_item_id):
     return redirect(request.META['HTTP_REFERER'])
 
 
-# @login_required(login_url='login')
+@login_required(login_url='login')
 def checkout(request, total=0, quantity=0, cart_items=None):
     try:
         cart = get_cart(request)
