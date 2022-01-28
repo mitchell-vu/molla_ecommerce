@@ -38,6 +38,9 @@
   <link rel="stylesheet" href="{% static 'assets/css/skins/skin-demo-4.css' %}">
   <link rel="stylesheet" href="{% static 'assets/css/demos/demo-4.css' %}">
   <link rel="stylesheet" href="{% static 'assets/css/custom_style.css' %}">
+
+  {% block head %}
+  {% endblock head %}
 </head>
 
 <body>
@@ -268,22 +271,30 @@
   
   <!-- Plugins JS File -->
   <script src="{% static 'assets/js/jquery.min.js' %}"></script>
-  <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
   <script src="{% static 'assets/js/jquery.hoverIntent.min.js' %}"></script>
   <script src="{% static 'assets/js/jquery.waypoints.min.js' %}"></script>
-  <script src="{% static 'assets/js/superfish.min.js' %}"></script>
-  <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
-  <script src="{% static 'assets/js/bootstrap-input-spinner.js' %}"></script>
   <script src="{% static 'assets/js/jquery.plugin.min.js' %}"></script>
   <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
   <script src="{% static 'assets/js/jquery.countdown.min.js' %}"></script>
-  <script src="{% static 'assets/js/wNumb.js' %}"></script>
+  <script src="{% static 'assets/js/jquery.countTo.min.js' %}"></script>
+  <script src="{% static 'assets/js/jquery.sticky-kit.min.js' %}"></script>
   <script src="{% static 'assets/js/nouislider.min.js' %}"></script>
+  <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/js/bootstrap-input-spinner.js' %}"></script>
+  <script src="{% static 'assets/js/superfish.min.js' %}"></script>
+  <script src="{% static 'assets/js/wNumb.js' %}"></script>
+  <script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
   
   <!-- Main JS File -->
   <script src="{% static 'assets/js/main.js' %}"></script>
   <script src="{% static 'assets/js/demos/demo-4.js' %}"></script>
   <script src="{% static 'assets/js/app.js' %}"></script>
+
+  {% block js %}
+  {% endblock js %}
+
 </body>
 
 

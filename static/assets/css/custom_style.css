@@ -30,3 +30,8 @@ figure.product-media a img {
   border: 0;
   padding-bottom: 1.5rem;
 }
+
+.old-price {
+  text-decoration: line-through !important;
+  font-size: 0.825em !important;
+}

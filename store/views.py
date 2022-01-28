@@ -44,6 +44,8 @@ def product_detail(request, category_slug, product_slug):
     )
     recommendations = Product.objects.all()[0:9]
     colors = single_product.variation_set.filter(variation_category__category_name='Color')
+    if single_product.discount_price:
+        print(single_product.discount_price)
     context = {
         'single_product': single_product,
         'recommendations': recommendations,
@@ -72,6 +74,7 @@ def search(request):
     categories = Category.objects.all()
 
     context = {
+        'q': q,
         'products': paged_products,
         'product_count': product_count,
         'category': 'Tìm kiếm',

@@ -29,6 +29,7 @@ class Product(models.Model):
     brand = models.ForeignKey(Brand, on_delete=models.SET_NULL, null=True)
     description = models.TextField(blank=True)
     price = models.IntegerField()
+    discount_price = models.IntegerField(default=0)
     images = models.ImageField(upload_to='photos/products')
     stock = models.IntegerField()
     is_available = models.BooleanField(default=True)
@@ -63,6 +64,7 @@ class Variation(models.Model):
     variation_category = models.ForeignKey(
         VariationCategory, on_delete=CASCADE)
     variation_value = models.CharField(max_length=100)
+    price_offset = models.IntegerField(default=0)
     variation_image = models.ImageField(upload_to=get_upload_path, null=True)
     stock = models.IntegerField()
 

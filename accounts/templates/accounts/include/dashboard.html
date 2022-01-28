@@ -8,9 +8,11 @@
       orders</a>, manage your <a href="#tab-address" class="tab-trigger-link">shipping and billing addresses</a>, and <a
       href="#tab-account" class="tab-trigger-link">edit your password and account details</a>.
   </p>
+  
+  {% if orders.count > 0 %}
 
   <h4 class="my-5 text-dark">Các đơn hàng gần đây</h4>
-
+  
   {% with orders|slice:"2" as filter_orders%}
   {% for order in filter_orders %}
   <div class="mb-5" id="accordion-{{ order.order_number }}">
@@ -61,4 +63,6 @@
   </div>
   {% endfor %}
   {% endwith %}
+
+  {% endif %}
 </div>
