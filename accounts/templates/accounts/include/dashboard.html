@@ -51,7 +51,14 @@
                   </div><!-- End .product -->
                 </td>
                 <td class="quantity-col">x {{ order_item.quantity }}</td>
-                <td class="price-col">{{ order_item.product.price|intcomma }}đ</td>
+                <td class="price-col">
+                  {% if order_item.product.discount_price %}
+                  <span class="new-price">{{ order_item.product.discount_price|intcomma }} đ</span>
+                  <span class="old-price">{{ order_item.product.price|intcomma }} đ</span>
+                  {% else %}
+                  {{ order_item.product.price|intcomma }} đ
+                  {% endif %}
+                </td>
               </tr>
               {% endfor %}
 

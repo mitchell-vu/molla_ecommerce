@@ -54,7 +54,14 @@
                                         </h3><!-- End .product-title -->
                                     </div><!-- End .product -->
                                 </td>
-                                <td class="price-col">{{ item.product.price|intcomma }} đ</td>
+                                <td class="price-col">
+                                    {% if item.product.discount_price %}
+                                    <span class="new-price">{{ item.product.discount_price|intcomma }} đ</span>
+                                    <span class="old-price">{{ item.product.price|intcomma }} đ</span>
+                                    {% else %}
+                                    {{ item.product.price|intcomma }} đ
+                                    {% endif %}
+                                </td>
                                 <td class="quantity-col">
                                     <div class="cart-product-quantity">
                                         <input data-cart_item="{{ item.id }}" type="number" class="form-control cart-item-quantity" value="{{ item.quantity }}" min="1" max="10" step="1"
