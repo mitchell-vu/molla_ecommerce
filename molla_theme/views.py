@@ -6,35 +6,35 @@ from store.models import Product
 def home(request):
   new_arrivals = [
     {
-      'title': 'All',
+      'title': 'Tất cả',
       'id': 'new-all',
       'products': Product.objects.all(),
       'class': 'show active',
     },
     {
-      'title': 'TV',
-      'id': 'new-tv',
-      'products': Product.objects.all(),
+      'title': 'Điện thoại',
+      'id': 'new-phone',
+      'products': Product.objects.filter(category__slug='dien-thoai'),
     },
     {
-      'title': 'Computers',
+      'title': 'Laptop',
       'id': 'new-computers',
-      'products': Product.objects.all(),
+      'products': Product.objects.filter(category__slug='laptop'),
     },
     {
-      'title': 'Tablets & Cellphones',
-      'id': 'new-phones',
-      'products': Product.objects.all(),
+      'title': 'Máy tính bảng',
+      'id': 'new-tablet',
+      'products': Product.objects.filter(category__slug='may-tinh-bang'),
     },
     {
-      'title': 'Smartwatches',
+      'title': 'Đồng hồ',
       'id': 'new-watches',
-      'products': Product.objects.all(),
+      'products': Product.objects.filter(category__slug='dong-ho-thong-minh'),
     },
     {
-      'title': 'Accessories',
+      'title': 'Phụ kiện',
       'id': 'new-acc',
-      'products': Product.objects.all(),
+      'products': Product.objects.filter(category__slug='phu-kien'),
     },
   ]
 
@@ -48,7 +48,7 @@ def home(request):
     {
       'title': 'On sale',
       'id': 'trending-sale',
-      'products': Product.objects.all(),
+      'products': Product.objects.filter(),
     },
   ]
 

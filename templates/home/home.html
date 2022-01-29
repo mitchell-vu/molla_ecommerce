@@ -66,79 +66,80 @@
 </div><!-- End .intro-slider-container -->
 
 <div class="container">
-  <h2 class="title text-center mb-4">Explore Popular Categories</h2><!-- End .title text-center -->
+  <h2 class="title text-center mb-4">Các danh mục sản phẩm nổi bật</h2><!-- End .title text-center -->
 
   <div class="cat-blocks-container">
     <div class="row">
       <div class="col-6 col-sm-4 col-lg-2">
-        <a href="category.html" class="cat-block">
+        <a href="{% url 'products_by_category' 'laptop' %}" class="cat-block">
           <figure>
             <span>
               <img src="{% static 'assets/images/demos/demo-4/cats/1.png' %}" alt="Category image">
             </span>
           </figure>
 
-          <h3 class="cat-block-title">Computer & Laptop</h3><!-- End .cat-block-title -->
+          <h3 class="cat-block-title">Laptop</h3><!-- End .cat-block-title -->
         </a>
       </div><!-- End .col-sm-4 col-lg-2 -->
 
       <div class="col-6 col-sm-4 col-lg-2">
-        <a href="category.html" class="cat-block">
-          <figure>
-            <span>
-              <img src="{% static 'assets/images/demos/demo-4/cats/2.png' %}" alt="Category image">
-            </span>
-          </figure>
-
-          <h3 class="cat-block-title">Digital Cameras</h3><!-- End .cat-block-title -->
-        </a>
-      </div><!-- End .col-sm-4 col-lg-2 -->
-
-      <div class="col-6 col-sm-4 col-lg-2">
-        <a href="category.html" class="cat-block">
+        <a href="{% url 'products_by_category' 'dien-thoai' %}" class="cat-block">
           <figure>
             <span>
               <img src="{% static 'assets/images/demos/demo-4/cats/3.png' %}" alt="Category image">
             </span>
           </figure>
 
-          <h3 class="cat-block-title">Smart Phones</h3><!-- End .cat-block-title -->
+          <h3 class="cat-block-title">Điện thoại</h3><!-- End .cat-block-title -->
         </a>
       </div><!-- End .col-sm-4 col-lg-2 -->
 
       <div class="col-6 col-sm-4 col-lg-2">
-        <a href="category.html" class="cat-block">
+        <a href="{% url 'products_by_category' 'may-tinh-bang' %}" class="cat-block">
           <figure>
             <span>
-              <img src="{% static 'assets/images/demos/demo-4/cats/4.png' %}" alt="Category image">
+              <img src="{% static 'assets/images/demos/demo-4/cats/4.png' %}" alt="Category image" style="width: 90px">
             </span>
           </figure>
 
-          <h3 class="cat-block-title">Televisions</h3><!-- End .cat-block-title -->
+          <h3 class="cat-block-title">Máy tính bảng</h3><!-- End .cat-block-title -->
         </a>
       </div><!-- End .col-sm-4 col-lg-2 -->
 
       <div class="col-6 col-sm-4 col-lg-2">
-        <a href="category.html" class="cat-block">
+        <a href="{% url 'products_by_category' 'thiet-bi-am-thanh' %}" class="cat-block">
           <figure>
             <span>
               <img src="{% static 'assets/images/demos/demo-4/cats/5.png' %}" alt="Category image">
             </span>
           </figure>
 
-          <h3 class="cat-block-title">Audio</h3><!-- End .cat-block-title -->
+          <h3 class="cat-block-title">Âm thanh</h3><!-- End .cat-block-title -->
         </a>
       </div><!-- End .col-sm-4 col-lg-2 -->
 
       <div class="col-6 col-sm-4 col-lg-2">
-        <a href="category.html" class="cat-block">
+        <a href="{% url 'products_by_category' 'dong-ho-thong-minh' %}" class="cat-block">
           <figure>
             <span>
               <img src="{% static 'assets/images/demos/demo-4/cats/6.png' %}" alt="Category image">
             </span>
           </figure>
 
-          <h3 class="cat-block-title">Smart Watches</h3><!-- End .cat-block-title -->
+          <h3 class="cat-block-title">Đồng hồ</h3><!-- End .cat-block-title -->
+        </a>
+      </div><!-- End .col-sm-4 col-lg-2 -->
+
+
+      <div class="col-6 col-sm-4 col-lg-2">
+        <a href="{% url 'products_by_category' 'phu-kien' %}" class="cat-block">
+          <figure>
+            <span>
+              <img src="{% static 'assets/images/demos/demo-4/cats/2.png' %}" alt="Category image" style="width: 100px">
+            </span>
+          </figure>
+
+          <h3 class="cat-block-title">Phụ kiện</h3><!-- End .cat-block-title -->
         </a>
       </div><!-- End .col-sm-4 col-lg-2 -->
     </div><!-- End .row -->
@@ -177,7 +178,7 @@
 <div class="container new-arrivals">
   <div class="heading heading-flex mb-3">
     <div class="heading-left">
-      <h2 class="title">New Arrivals</h2><!-- End .title -->
+      <h2 class="title">Sản phẩm mới</h2><!-- End .title -->
     </div><!-- End .heading-left -->
 
     <div class="heading-right">
@@ -207,7 +208,7 @@
 
 <div class="container">
   <div class="cta cta-border mb-5" style="background-image: url({% static 'assets/images/demos/demo-4/bg-1.jpg' %});">
-    <img src="{%static 'assets/images/demos/demo-4/camera.png' %}" alt="camera" class="cta-img">
+    <img src="{%  static 'assets/images/demos/demo-4/camera.png' %}" alt="camera" class="cta-img">
     <div class="row justify-content-center">
       <div class="col-md-12">
         <div class="cta-content">
@@ -230,7 +231,7 @@
 
   <div class="row">
     <div class="col-lg-6 deal-col">
-      <div class="deal" style="background-image: url('static/assets/images/demos/demo-4/deal/bg-1.jpg');">
+      <div class="deal" style="background-image: url({% static 'assets/images/demos/demo-4/deal/bg-1.jpg' %});">
         <div class="deal-top">
           <h2>Deal of the Day.</h2>
           <h4>Limited quantities. </h4>
@@ -326,7 +327,7 @@
   <div class="container trending-products">
     <div class="heading heading-flex mb-3">
       <div class="heading-left">
-        <h2 class="title">Trending Products</h2><!-- End .title -->
+        <h2 class="title">Sản phẩm nổi bật</h2><!-- End .title -->
       </div><!-- End .heading-left -->
 
       <div class="heading-right">
